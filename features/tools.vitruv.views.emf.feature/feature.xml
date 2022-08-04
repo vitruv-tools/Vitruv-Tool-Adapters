@@ -39,7 +39,7 @@
    </requires>
 
    <plugin
-         id="tools.vitruv.domains.emf.ui"
+         id="tools.vitruv.views.emf"
          download-size="0"
          install-size="0"
          version="0.0.0"
