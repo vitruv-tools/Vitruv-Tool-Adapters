@@ -5,18 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>tools.vitruv</groupId>
-		<artifactId>views-parent</artifactId>
+		<artifactId>framework-parent</artifactId>
 		<version>2.1.0-SNAPSHOT</version>
-		<relativePath>releng/tools.vitruv.views.parent</relativePath>
+		<relativePath>../tools.vitruv.parent</relativePath>
 	</parent>
-	<artifactId>tools.vitruv</artifactId>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>bundles</module>
-		<module>tests</module>
-		<module>features</module>
-		<module>releng/tools.vitruv.views.updatesite</module>
-	</modules>
-
+	
+	<artifactId>tools.vitruv.updatesite</artifactId>
+	<name>Vitruv Framework Update Site</name>
+	<packaging>eclipse-repository</packaging>
+	
 </project>
