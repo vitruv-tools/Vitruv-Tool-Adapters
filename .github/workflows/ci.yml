@@ -47,7 +47,7 @@ jobs:
           deploy_key: ${{ secrets.UPDATE_SITE_DEPLOY_KEY }}
           external_repository: vitruv-tools/updatesite
           destination_dir: nightly/views
-          publish_dir: releng/tools.vitruv.views.updatesite/target/repository
+          publish_dir: releng/tools.vitruv.adapters.updatesite/target/repository
           publish_branch: main
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
@@ -64,7 +64,7 @@ jobs:
           deploy_key: ${{ secrets.UPDATE_SITE_DEPLOY_KEY }}
           external_repository: vitruv-tools/updatesite
           destination_dir: release/views/${{ steps.releaseVersion.outputs.tag }}
-          publish_dir: releng/tools.vitruv.views.updatesite/target/repository
+          publish_dir: releng/tools.vitruv.adapters.updatesite/target/repository
           publish_branch: main
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'

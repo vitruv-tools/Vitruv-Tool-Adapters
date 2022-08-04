@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/tools.vitruv.adapters.emf.feature_2.1.0.qualifier.jar" id="tools.vitruv.adapters.emf.feature" version="2.1.0.qualifier">
+      <category name="Vitruv Tool Adapters"/>
+   </feature>
+   <feature id="tools.vitruv.adapters.emf.feature.source" version="2.1.0.qualifier">
+      <category name="Vitruv Tool Adapters"/>
+   </feature>
+   <category-def name="Vitruv Tool Adapters" label="Vitruv Tool Adapters">
+      <description>
+         Adapters for Vitruv views to be used in specific tools/environments, such as EMF model views in Eclipse
+      </description>
+   </category-def>
+</site>

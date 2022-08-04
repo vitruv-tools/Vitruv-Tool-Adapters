@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Vitruv EMF Adapter Tests
+Bundle-Vendor: vitruv.tools
+Bundle-SymbolicName: tools.vitruv.adapters.emf.tests;singleton:=true
+Automatic-Module-Name: tools.vitruv.adapters.emf.tests
+Bundle-Version: 2.1.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Bundle-ActivationPolicy: lazy
+Require-Bundle: tools.vitruv.testutils.vsum,
+ org.junit.jupiter.api,
+ org.apache.log4j,
+ tools.vitruv.adapters.emf,
+ org.eclipse.gmf.runtime.diagram.ui,
+ org.eclipse.gmf.runtime.diagram.ui.resources.editor
+Bundle-ClassPath: .,
+ lib/cglib-nodep-3.1.jar,
+ lib/easymock-3.1.jar,
+ lib/objenesis-1.2.jar

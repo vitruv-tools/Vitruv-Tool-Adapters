@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         id="tools.vitruv.views.emf.builder.id"
+         point="org.eclipse.core.resources.builders">
+      <builder>
+         <run
+               class="tools.vitruv.adapters.emf.builder.VitruvEmfBuilder">
+         </run>
+       </builder>
+   </extension>
+   <extension
+         name="Vitruv EMF Project Builder"
+         point="tools.vitruv.framework.domains.ui.builder">
+      <assignment
+      		name="Vitruv EMF Project Builder" 
+            builderId="tools.vitruv.views.emf.builder.id">
+      </assignment>
+   </extension>
+
+</plugin>

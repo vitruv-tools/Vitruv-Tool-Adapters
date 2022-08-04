@@ -1,4 +1,4 @@
-# Vitruv Views
+# Vitruv Tool Adapters
 [![GitHub Action CI](https://github.com/vitruv-tools/Vitruv-Views/workflows/CI/badge.svg)](https://github.com/vitruv-tools/Vitruv-Views/actions?query=workflow%3ACI)
 [![Issues](https://img.shields.io/github/issues/vitruv-tools/Vitruv-Views.svg)](https://github.com/vitruv-tools/Vitruv-Views/issues)
 [![License](https://img.shields.io/github/license/vitruv-tools/Vitruv-Views.svg)](https://raw.githubusercontent.com/vitruv-tools/Vitruv-Views/main/LICENSE)
