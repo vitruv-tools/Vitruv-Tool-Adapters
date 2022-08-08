@@ -33,7 +33,7 @@ import tools.vitruv.framework.views.ViewSelector;
 import tools.vitruv.framework.views.ViewTypeFactory;
 
 public class VitruvEmfBuilder extends VitruvProjectBuilder {
-	public static final String BUILDER_ID = "tools.vitruv.views.emf.builder.id";
+	public static final String BUILDER_ID = "tools.vitruv.adapters.emf.builder.id";
     private static final Logger LOGGER = Logger.getLogger(VitruvEmfBuilder.class);
 
     private final VitruviusEMFDeltaVisitor vitruviusEMFDeltaVisitor;
