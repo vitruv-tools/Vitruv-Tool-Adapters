@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>tools.vitruv</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.4.1</version>
+	</parent>
+	<artifactId>adapters-parent</artifactId>
+	<version>2.1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<!-- For each project, a local updatesite can be specified by overwriting these properties. They default to the Vitruv updatesites. -->
+		<vitruv.change.url>https://vitruv-tools.github.io/updatesite/nightly/change/</vitruv.change.url>
+		<vitruv.framework.url>https://vitruv-tools.github.io/updatesite/nightly/framework/</vitruv.framework.url>
+	</properties>
+
+	<repositories>
+		<!-- The specific Vitruv change updatesite to be potentially overwritten by local builds -->
+		<repository>
+			<id>Vitruv Change</id>
+			<layout>p2</layout>
+			<url>${vitruv.change.url}</url>
+		</repository>
+		<repository>
+			<id>Vitruv Framework</id>
+			<layout>p2</layout>
+			<url>${vitruv.framework.url}</url>
+		</repository>
+		<repository>
+			<id>Demo Metamodels</id>
+			<layout>p2</layout>
+			<url>https://kit-sdq.github.io/updatesite/release/metamodels/demo/latest/</url>
+		</repository>
+		<repository>
+			<id>SDQ Commons</id>
+			<layout>p2</layout>
+			<url>https://kit-sdq.github.io/updatesite/release/commons/latest/</url>
+		</repository>
+		<repository>
+			<id>XAnnotations</id>
+			<layout>p2</layout>
+			<url>https://kit-sdq.github.io/updatesite/release/xannotations/latest/</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<systemPropertyVariables>
+							<vitruv.workspace>${project.build.directory}/work/data</vitruv.workspace>
+						</systemPropertyVariables>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>local-change</id>
+			<activation>
+				<property>
+					<name>vitruv.change.path</name>
+				</property>
+			</activation>
+			<properties>
+				<vitruv.change.url>file:///${vitruv.change.path}/releng/tools.vitruv.change.updatesite/target/repository</vitruv.change.url>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>local-framework</id>
+			<activation>
+				<property>
+					<name>vitruv.framework.path</name>
+				</property>
+			</activation>
+			<properties>
+				<vitruv.framework.url>file:///${vitruv.framework.path}/releng/tools.vitruv.updatesite/target/repository</vitruv.framework.url>
+			</properties>
+		</profile>
+	</profiles>
+
+</project>
