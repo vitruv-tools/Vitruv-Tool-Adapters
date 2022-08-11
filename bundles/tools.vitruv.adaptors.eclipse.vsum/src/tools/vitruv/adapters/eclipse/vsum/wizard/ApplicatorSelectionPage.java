@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
-import tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilderApplicator;
+import tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderApplicator;
 import tools.vitruv.framework.vsum.ui.util.ProjectCreator;
 
 import java.util.HashMap;
@@ -34,7 +34,7 @@ public class ApplicatorSelectionPage extends WizardPage {
 	private static final String SELECTION_LABEL = "Select involved projects and their monitors:";
 	private static final String PAGENAME = "Project and Monitor Selection";
 	private static final String DESCRIPTION = "Select projects and their monitors";
-	private Map<IProject, Set<VitruvProjectBuilderApplicator>> selectedApplicatorsForProjects;
+	private Map<IProject, Set<VitruvEclipseProjectBuilderApplicator>> selectedApplicatorsForProjects;
 	private Tree tree;
 	private Composite container;
 	
@@ -70,7 +70,7 @@ public class ApplicatorSelectionPage extends WizardPage {
 						// check a project automatically, when one of it's domains is checked
 						if (null != parent) {
 							parent.setChecked(true);
-							selectedApplicatorsForProjects.get(parent.getData()).add((VitruvProjectBuilderApplicator) item.getData());
+							selectedApplicatorsForProjects.get(parent.getData()).add((VitruvEclipseProjectBuilderApplicator) item.getData());
 						}
 					} else {
 						// all domains get unselected, when project is unselected
@@ -124,13 +124,13 @@ public class ApplicatorSelectionPage extends WizardPage {
 	private void initializeProjectList() {
 		tree.removeAll();
 		IProject projects[] = getProjects();
-		Iterable<VitruvProjectBuilderApplicator> applicators = VitruvProjectBuilderApplicator.getApplicators();
+		Iterable<VitruvEclipseProjectBuilderApplicator> applicators = VitruvEclipseProjectBuilderApplicator.getApplicators();
 		for (IProject project : projects) {
 			TreeItem t = new TreeItem(tree, SWT.CHECK);
 			t.setText(project.getName());
 			t.setData(project);
 			selectedApplicatorsForProjects.put(project, new HashSet<>());
-			for (VitruvProjectBuilderApplicator applicator : applicators) {
+			for (VitruvEclipseProjectBuilderApplicator applicator : applicators) {
 				TreeItem childItem = new TreeItem(t, SWT.CHECK);
 				childItem.setText(applicator.getName());
 				childItem.setData(applicator);
@@ -145,7 +145,7 @@ public class ApplicatorSelectionPage extends WizardPage {
 	 * @return a HashMap that maps all project to their checked applicators,
 	 *         respectively
 	 */
-	public Map<IProject, Set<VitruvProjectBuilderApplicator>> getCheckedApplicators() {
+	public Map<IProject, Set<VitruvEclipseProjectBuilderApplicator>> getCheckedApplicators() {
 		return selectedApplicatorsForProjects;
 	}
 
@@ -153,10 +153,10 @@ public class ApplicatorSelectionPage extends WizardPage {
 		return ResourcesPlugin.getWorkspace().getRoot().getProjects();
 	}
 
-	Iterable<VitruvProjectBuilderApplicator> getSelectedApplicators() {
-		Set<VitruvProjectBuilderApplicator> applicators = new HashSet<>();
-		for (Set<VitruvProjectBuilderApplicator> applicatorsSet : selectedApplicatorsForProjects.values()) {
-			for (VitruvProjectBuilderApplicator applicator : applicatorsSet) {
+	Iterable<VitruvEclipseProjectBuilderApplicator> getSelectedApplicators() {
+		Set<VitruvEclipseProjectBuilderApplicator> applicators = new HashSet<>();
+		for (Set<VitruvEclipseProjectBuilderApplicator> applicatorsSet : selectedApplicatorsForProjects.values()) {
+			for (VitruvEclipseProjectBuilderApplicator applicator : applicatorsSet) {
 				applicators.add(applicator);
 			}
 		}

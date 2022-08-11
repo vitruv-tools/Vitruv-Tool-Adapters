@@ -8,8 +8,8 @@ import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
+import tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderApplicator;
 import tools.vitruv.framework.applications.VitruvApplication;
-import tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilderApplicator;
 import tools.vitruv.framework.vsum.ui.util.VitruvInstanceCreator;
 
 import java.util.Map;
@@ -55,10 +55,10 @@ public class CreateVsumWizard extends Wizard implements INewWizard {
 		String name = projectNamePage.getEnteredName();
 		logger.info("Vitruvius wizard completed: ");
 		logger.info("  Vsum name: " + name);
-		Map<IProject, Set<VitruvProjectBuilderApplicator>> projectsToApplicators = applicatorSelectionPage.getCheckedApplicators();
+		Map<IProject, Set<VitruvEclipseProjectBuilderApplicator>> projectsToApplicators = applicatorSelectionPage.getCheckedApplicators();
 		Iterable<VitruvApplication> applications = applicationSelectionPage.getSelectedApplications();
 		for (IProject project : projectsToApplicators.keySet()) {
-			for (VitruvProjectBuilderApplicator applicator : projectsToApplicators.get(project)) {
+			for (VitruvEclipseProjectBuilderApplicator applicator : projectsToApplicators.get(project)) {
 				logger.info("  Selected builder " + applicator.getName() + " in project " + project.getName());
 			}
 		}
