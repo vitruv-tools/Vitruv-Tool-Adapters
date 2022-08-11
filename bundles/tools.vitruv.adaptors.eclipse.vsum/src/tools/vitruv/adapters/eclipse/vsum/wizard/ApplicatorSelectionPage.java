@@ -20,7 +20,7 @@ import org.eclipse.swt.widgets.Tree;
 import org.eclipse.swt.widgets.TreeItem;
 
 import tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderApplicator;
-import tools.vitruv.framework.vsum.ui.util.ProjectCreator;
+import tools.vitruv.adapters.eclipse.vsum.util.ProjectCreator;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -9,8 +9,8 @@ import org.eclipse.ui.INewWizard;
 import org.eclipse.ui.IWorkbench;
 
 import tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderApplicator;
+import tools.vitruv.adapters.eclipse.vsum.util.VitruvInstanceCreator;
 import tools.vitruv.framework.applications.VitruvApplication;
-import tools.vitruv.framework.vsum.ui.util.VitruvInstanceCreator;
 
 import java.util.Map;
 import java.util.Set;

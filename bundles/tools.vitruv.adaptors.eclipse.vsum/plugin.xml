@@ -36,7 +36,7 @@
       <command
             defaultHandler="tools.vitruv.adapters.eclipse.vsum.CreateVsumButtonHandler"
             id="tools.vitruv.adapters.eclipse.vsum.vitruvwizardcommand"
-            name="VitruvWizard">
+            name="Create Vitruv V-SUM and register projects">
       </command>
    </extension>
 
