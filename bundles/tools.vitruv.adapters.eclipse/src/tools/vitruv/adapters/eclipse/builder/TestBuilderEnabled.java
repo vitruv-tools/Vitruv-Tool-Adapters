@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.builder;
+package tools.vitruv.adapters.eclipse.builder;
 
 import org.eclipse.core.expressions.PropertyTester;
 import org.eclipse.core.resources.IProject;

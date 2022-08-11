@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.builder
+package tools.vitruv.adapters.eclipse.builder
 
 import static com.google.common.base.Preconditions.checkState
 import static com.google.common.base.Preconditions.checkArgument
@@ -6,12 +6,12 @@ import java.util.Set
 import org.eclipse.core.runtime.Platform
 import java.util.HashSet
 
-final class VitruvProjectBuilderRegistry {
-	public static val EXTENSION_POINT_ID = "tools.vitruv.framework.domains.ui.builder"
+final class VitruvEclipseProjectBuilderRegistry {
+	public static val EXTENSION_POINT_ID = "tools.vitruv.adapters.eclipse.builder"
 	static val EXTENSION_BUILDER_ATTRIBUTE = "builderId"
 	static val EXTENSION_NAME_ATTRIBUTE = "name"
 	
-	public static val INSTANCE = new VitruvProjectBuilderRegistry
+	public static val INSTANCE = new VitruvEclipseProjectBuilderRegistry
 	static val runtimeRegisteredBuilderIds = new HashSet<Pair<String, String>>
 	
 	new() {

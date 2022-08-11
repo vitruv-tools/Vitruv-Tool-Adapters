@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.builder
+package tools.vitruv.adapters.eclipse.builder
 
 import org.eclipse.core.resources.IProject
 import org.eclipse.core.resources.ICommand
@@ -9,13 +9,13 @@ import org.apache.log4j.Logger
 import static extension edu.kit.ipd.sdq.commons.util.org.eclipse.core.resources.IProjectUtil.hasBuilder
 import java.util.Set
 import static com.google.common.base.Preconditions.checkArgument
-import static extension tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilderArguments.*
 import static extension edu.kit.ipd.sdq.commons.util.org.eclipse.core.resources.IProjectUtil.buildIncrementally
 import java.nio.file.Path
 import org.eclipse.xtend.lib.annotations.Accessors
+import static extension tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderArguments.*
 
-final class VitruvProjectBuilderApplicatorImpl implements VitruvProjectBuilderApplicator {
-	static val LOGGER = Logger.getLogger(VitruvProjectBuilderApplicatorImpl)
+final class VitruvEclipseProjectBuilderApplicatorImpl implements VitruvEclipseProjectBuilderApplicator {
+	static val LOGGER = Logger.getLogger(VitruvEclipseProjectBuilderApplicatorImpl)
 
 	@Accessors
 	val String name

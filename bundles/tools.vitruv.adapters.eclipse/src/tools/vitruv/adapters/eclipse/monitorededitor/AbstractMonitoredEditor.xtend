@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.monitorededitor
+package tools.vitruv.adapters.eclipse.monitorededitor
 
 import tools.vitruv.framework.vsum.VirtualModel
 import org.eclipse.xtend.lib.annotations.Accessors

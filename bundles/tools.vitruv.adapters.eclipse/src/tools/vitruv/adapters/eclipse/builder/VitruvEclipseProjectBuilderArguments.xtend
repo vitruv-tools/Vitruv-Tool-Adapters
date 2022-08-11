@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.builder
+package tools.vitruv.adapters.eclipse.builder
 
 import org.eclipse.core.resources.ICommand
 import edu.kit.ipd.sdq.activextendannotations.Utility
@@ -8,7 +8,7 @@ import java.util.Set
 import java.nio.file.Path
 
 @Utility
-class VitruvProjectBuilderArguments {
+class VitruvEclipseProjectBuilderArguments {
 	public static val ARGUMENT_VMODEL_NAME = "virtualModelName"
 	public static val ARGUMENT_FILE_EXTENSIONS = "fileExtensions"
 	public static val ARGUMENT_AUTO_PROPAGATE_CHANGE_INTERVAL = "propagateAfterChangeMilliseconds"

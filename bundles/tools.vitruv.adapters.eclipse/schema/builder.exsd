@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!-- Schema file written by PDE -->
-<schema targetNamespace="tools.vitruv.framework.domains.ui" xmlns="http://www.w3.org/2001/XMLSchema">
+<schema targetNamespace="tools.vitruv.adapters.eclipse" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="tools.vitruv.framework.domains.ui" id="builder" name="Vitruvius Project Builder"/>
+         <meta.schema plugin="tools.vitruv.adapters.eclipse" id="builder" name="Vitruv Eclipse Project Builder"/>
       </appinfo>
       <documentation>
          Defines a VitruvProjectBuilder to use for a specific kind of monitoring changes.
@@ -88,7 +88,7 @@
 &lt;extension
       id=&quot;tools.vitruv.extensions.emf.builder&quot;
       name=&quot;Vitruv EMF Project Builder&quot;
-      point=&quot;tools.vitruv.framework.domains.ui.builder&quot;&gt;
+      point=&quot;tools.vitruv.adapters.eclipse.builder&quot;&gt;
    &lt;assignment
       name=&quot;Vitruv EMF Project Builder&quot;
          builder_id=&quot;tools.vitruv.domains.emf.builder.VitruviusEmfBuilder.id&quot;&gt;
@@ -116,7 +116,7 @@ The example registers a build with ID &quot;tools.vitruv.domains.emf.builder.Vit
       </appinfo>
       <documentation>
          Copyright (c) 2014-2022 vitruv.tools&lt;br&gt;
-Karlsruhe Institute of Technology (KIT), Software Design and Quality, Karlsruhe, Germany
+Karlsruhe Institute of Technology (KIT), Karlsruhe, Germany
 
 This program and the accompanying materials are made 
 available under the terms of the Eclipse Public License 2.0 which 

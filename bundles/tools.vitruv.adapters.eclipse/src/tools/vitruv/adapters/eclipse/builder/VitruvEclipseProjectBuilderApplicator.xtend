@@ -1,11 +1,11 @@
-package tools.vitruv.framework.domains.ui.builder
+package tools.vitruv.adapters.eclipse.builder
 
 import org.eclipse.core.resources.IProject
 import java.util.Set
 import com.google.common.collect.Sets
 import java.nio.file.Path
 
-interface VitruvProjectBuilderApplicator {
+interface VitruvEclipseProjectBuilderApplicator {
 	/**
 	 * Returns the name of the builder
 	 */
@@ -14,12 +14,12 @@ interface VitruvProjectBuilderApplicator {
 	/**
 	 * Enables or disables automatically running change propagation after a build was triggered in the generated builder.
 	 */
-	def VitruvProjectBuilderApplicator setPropagateAfterBuild(boolean enabled)
+	def VitruvEclipseProjectBuilderApplicator setPropagateAfterBuild(boolean enabled)
 
 	/**
 	 * Specifies that if no further change occurred after another change within the given time period, the builder will trigger change propagation.
 	 */
-	def VitruvProjectBuilderApplicator setPropagateAfterChangeMilliseconds(int milliseconds)
+	def VitruvEclipseProjectBuilderApplicator setPropagateAfterChangeMilliseconds(int milliseconds)
 
 	/**
 	 * Adds the builder for the virtual model in the given folder and for the given file extensions to the given project.
@@ -39,8 +39,8 @@ interface VitruvProjectBuilderApplicator {
 	 */
 	def void removeBuilder(IProject project) throws IllegalStateException
 	
-	static def Set<VitruvProjectBuilderApplicator> getApplicators() {
-		Sets.newHashSet(VitruvProjectBuilderRegistry.INSTANCE.allProjectBuilderIds.map[new VitruvProjectBuilderApplicatorImpl(it.key, it.value)])
+	static def Set<VitruvEclipseProjectBuilderApplicator> getApplicators() {
+		Sets.newHashSet(VitruvEclipseProjectBuilderRegistry.INSTANCE.allProjectBuilderIds.map[new VitruvEclipseProjectBuilderApplicatorImpl(it.key, it.value)])
 	}
 	
 }

@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui;
+package tools.vitruv.adapters.eclipse;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

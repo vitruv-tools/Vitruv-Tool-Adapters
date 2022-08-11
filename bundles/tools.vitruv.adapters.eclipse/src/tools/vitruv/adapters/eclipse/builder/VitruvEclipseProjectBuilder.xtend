@@ -1,4 +1,4 @@
-package tools.vitruv.framework.domains.ui.builder
+package tools.vitruv.adapters.eclipse.builder
 
 import org.apache.log4j.Logger
 import java.util.Set
@@ -8,12 +8,12 @@ import org.eclipse.core.resources.IProject
 import java.util.Map
 import org.eclipse.core.runtime.IProgressMonitor
 import org.eclipse.core.runtime.CoreException
-import static extension tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilderArguments.getVirtualModelFolder
-import static extension tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilderArguments.getFileExtensions
 import tools.vitruv.framework.vsum.VirtualModelManager
+import static extension tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderArguments.getFileExtensions
+import static extension tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilderArguments.getVirtualModelFolder
 
-abstract class VitruvProjectBuilder extends IncrementalProjectBuilder {
-	static final Logger logger = Logger.getLogger(VitruvProjectBuilder)
+abstract class VitruvEclipseProjectBuilder extends IncrementalProjectBuilder {
+	static final Logger logger = Logger.getLogger(VitruvEclipseProjectBuilder)
 
 	boolean initialized = false
 
