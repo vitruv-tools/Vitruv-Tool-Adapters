@@ -1,4 +1,4 @@
-package tools.vitruv.framework.vsum.ui.util
+package tools.vitruv.adapters.eclipse.vsum.util
 
 import tools.vitruv.framework.applications.VitruvApplication
 import java.util.Map
