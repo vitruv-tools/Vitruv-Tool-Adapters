@@ -23,15 +23,24 @@
       <import plugin="org.apache.log4j"/>
       <import plugin="org.eclipse.core.runtime"/>
       <import plugin="org.eclipse.core.resources"/>
-      <import plugin="org.eclipse.core.expressions"/>
-      <import plugin="tools.vitruv.framework.vsum"/>
       <import plugin="org.eclipse.xtend.lib"/>
+      <import plugin="org.eclipse.core.expressions"/>
       <import plugin="edu.kit.ipd.sdq.commons.util.eclipse"/>
       <import plugin="edu.kit.ipd.sdq.activextendannotations"/>
+      <import plugin="tools.vitruv.framework.vsum"/>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="tools.vitruv.framework.applications"/>
    </requires>
 
    <plugin
          id="tools.vitruv.adapters.eclipse"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="tools.vitruv.adapters.eclipse.vsum"
          download-size="0"
          install-size="0"
          version="0.0.0"
