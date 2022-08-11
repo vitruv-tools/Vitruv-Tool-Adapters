@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="tools.vitruv.adapters.eclipse.vsum"
+            name="Vitruv">
+      </category>
+      <wizard
+            category="tools.vitruv.adapters.eclipse.vsum"
+            class="tools.vitruv.adapters.eclipse.vsum.wizard.CreateVsumWizard"
+            icon="images/vitruvian.png"
+            id="tools.vitruv.adapters.eclipse.vsum.newvitruvwizard"
+            name="Vitruv Project">
+      </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="tools.vitruv.adapters.eclipse.vsum.toolbar">
+            <command
+                  commandId="tools.vitruv.adapters.eclipse.vsum.vitruvwizardcommand"
+                  icon="images/vitruvian.png"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         id="tools.vitruv.adapters.eclipse.vsum.vitruvwizardcommand"
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="tools.vitruv.adapters.eclipse.vsum.CreateVsumButtonHandler"
+            id="tools.vitruv.adapters.eclipse.vsum.vitruvwizardcommand"
+            name="Create Vitruv V-SUM and register projects">
+      </command>
+   </extension>
+
+</plugin>

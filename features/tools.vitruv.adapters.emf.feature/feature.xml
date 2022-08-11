@@ -29,13 +29,13 @@
       <import plugin="org.apache.log4j"/>
       <import plugin="org.eclipse.emf.ecore"/>
       <import plugin="org.eclipse.emf.transaction"/>
-      <import plugin="tools.vitruv.framework.domains.ui"/>
       <import plugin="tools.vitruv.framework.vsum"/>
       <import plugin="tools.vitruv.change.propagation"/>
       <import plugin="tools.vitruv.change.composite"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui"/>
       <import plugin="org.eclipse.gmf.runtime.diagram.ui.resources.editor"/>
       <import plugin="edu.kit.ipd.sdq.commons.util.emf"/>
+      <import plugin="tools.vitruv.adapters.eclipse"/>
    </requires>
 
    <plugin

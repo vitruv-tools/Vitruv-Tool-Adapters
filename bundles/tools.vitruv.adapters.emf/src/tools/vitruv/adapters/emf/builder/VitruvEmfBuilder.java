@@ -21,18 +21,18 @@ import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilder;
 import tools.vitruv.adapters.emf.monitorededitor.IEditorPartAdapterFactory;
 import tools.vitruv.adapters.emf.monitorededitor.IVitruviusEMFEditorMonitor;
 import tools.vitruv.adapters.emf.monitorededitor.IVitruviusEMFEditorMonitor.IVitruviusAccessor;
 import tools.vitruv.adapters.emf.monitorededitor.monitor.DefaultEditorPartAdapterFactoryImpl;
 import tools.vitruv.adapters.emf.monitorededitor.monitor.EMFEditorMonitorFactory;
-import tools.vitruv.framework.domains.ui.builder.VitruvProjectBuilder;
 import tools.vitruv.framework.views.CommittableView;
 import tools.vitruv.framework.views.View;
 import tools.vitruv.framework.views.ViewSelector;
 import tools.vitruv.framework.views.ViewTypeFactory;
 
-public class VitruvEmfBuilder extends VitruvProjectBuilder {
+public class VitruvEmfBuilder extends VitruvEclipseProjectBuilder {
 	public static final String BUILDER_ID = "tools.vitruv.adapters.emf.builder.id";
     private static final Logger LOGGER = Logger.getLogger(VitruvEmfBuilder.class);
 

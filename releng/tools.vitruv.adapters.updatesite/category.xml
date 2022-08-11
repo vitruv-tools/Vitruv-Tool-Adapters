@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
+   <feature url="features/tools.vitruv.adapters.eclipse.feature_2.1.0.qualifier.jar" id="tools.vitruv.adapters.eclipse.feature" version="2.1.0.qualifier">
+      <category name="Vitruv Tool Adapters"/>
+   </feature>
+   <feature id="tools.vitruv.adapters.eclipse.feature.source" version="2.1.0.qualifier">
+      <category name="Vitruv Tool Adapters"/>
+   </feature>
    <feature url="features/tools.vitruv.adapters.emf.feature_2.1.0.qualifier.jar" id="tools.vitruv.adapters.emf.feature" version="2.1.0.qualifier">
       <category name="Vitruv Tool Adapters"/>
    </feature>
