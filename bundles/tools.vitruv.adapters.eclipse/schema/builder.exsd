@@ -6,7 +6,7 @@
          <meta.schema plugin="tools.vitruv.adapters.eclipse" id="builder" name="Vitruv Eclipse Project Builder"/>
       </appinfo>
       <documentation>
-         Defines a VitruvProjectBuilder to use for a specific kind of monitoring changes.
+         Defines a VitruvEclipseProjectBuilder to use for a specific kind of monitoring changes.
       </documentation>
    </annotation>
 
@@ -86,17 +86,23 @@
          &lt;p&gt;
 &lt;pre&gt;
 &lt;extension
-      id=&quot;tools.vitruv.extensions.emf.builder&quot;
+      id=&quot;tools.vitruv.adapters.emf.builder.id&quot;
+      point=&quot;org.eclipse.core.resources.builders&quot;&gt;
+   &lt;builder&gt;
+      &lt;run class=&quot;tools.vitruv.adapters.emf.builder.VitruvEmfBuilder&quot;/&gt;
+   &lt;/builder&gt;
+&lt;/extension&gt;
+&lt;extension
       name=&quot;Vitruv EMF Project Builder&quot;
       point=&quot;tools.vitruv.adapters.eclipse.builder&quot;&gt;
    &lt;assignment
-      name=&quot;Vitruv EMF Project Builder&quot;
-         builder_id=&quot;tools.vitruv.domains.emf.builder.VitruviusEmfBuilder.id&quot;&gt;
+     name=&quot;Vitruv EMF Project Builder&quot; 
+        builderId=&quot;tools.vitruv.adapters.emf.builder.id&quot;&gt;
    &lt;/assignment&gt;
 &lt;/extension&gt;
 &lt;/pre&gt;
 &lt;/p&gt;
-The example registers a build with ID &quot;tools.vitruv.domains.emf.builder.VitruviusEmfBuilder.id&quot;.
+The example registers a build with ID &quot;tools.vitruv.adapters.emf.builder.id&quot;.
       </documentation>
    </annotation>
 
@@ -105,7 +111,7 @@ The example registers a build with ID &quot;tools.vitruv.domains.emf.builder.Vit
          <meta.section type="apiinfo"/>
       </appinfo>
       <documentation>
-         The value of the builder ID attribute must reference a builder that is a subclass of &lt;samp&gt;tools.vitruv.domains.ui.builder.VitruvProjectBuilder&lt;/samp&gt;.
+         The value of the builder ID attribute must reference a builder that is a subclass of &lt;samp&gt;tools.vitruv.adapters.eclipse.builder.VitruvEclipseProjectBuilder&lt;/samp&gt;.
       </documentation>
    </annotation>
 
