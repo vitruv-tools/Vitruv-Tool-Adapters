@@ -3,7 +3,7 @@
 <schema targetNamespace="tools.vitruv.adapters.eclipse" xmlns="http://www.w3.org/2001/XMLSchema">
 <annotation>
       <appinfo>
-         <meta.schema plugin="tools.vitruv.adapters.eclipse" id="builder" name="Vitruv Eclipse Project Builder"/>
+         <meta.schema plugin="tools.vitruv.adapters.eclipse" id="projectbuilder" name="Vitruv Eclipse Project Builder"/>
       </appinfo>
       <documentation>
          Defines a VitruvEclipseProjectBuilder to use for a specific kind of monitoring changes.
@@ -94,7 +94,7 @@
 &lt;/extension&gt;
 &lt;extension
       name=&quot;Vitruv EMF Project Builder&quot;
-      point=&quot;tools.vitruv.adapters.eclipse.builder&quot;&gt;
+      point=&quot;tools.vitruv.adapters.eclipse.projectbuilder&quot;&gt;
    &lt;assignment
      name=&quot;Vitruv EMF Project Builder&quot; 
         builderId=&quot;tools.vitruv.adapters.emf.builder.id&quot;&gt;
