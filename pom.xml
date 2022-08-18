@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>tools.vitruv</groupId>
 		<artifactId>adapters-parent</artifactId>
-		<version>2.1.0-SNAPSHOT</version>
+		<version>3.0.0-SNAPSHOT</version>
 		<relativePath>releng/tools.vitruv.adapters.parent</relativePath>
 	</parent>
 	<artifactId>tools.vitruv</artifactId>
