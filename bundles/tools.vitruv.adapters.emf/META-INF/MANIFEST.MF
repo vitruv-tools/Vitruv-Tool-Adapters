@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Vitruv EMF Tool Adapter
 Bundle-SymbolicName: tools.vitruv.adapters.emf;singleton:=true
 Automatic-Module-Name: tools.vitruv.adapters.emf
-Bundle-Version: 3.0.0.qualifier
+Bundle-Version: 3.0.0
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Require-Bundle: org.eclipse.core.resources,
  org.eclipse.core.runtime,

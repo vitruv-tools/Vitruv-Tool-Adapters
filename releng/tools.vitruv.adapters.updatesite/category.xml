@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/tools.vitruv.adapters.eclipse.feature_3.0.0.qualifier.jar" id="tools.vitruv.adapters.eclipse.feature" version="3.0.0.qualifier">
+   <feature url="features/tools.vitruv.adapters.eclipse.feature_3.0.0.jar" id="tools.vitruv.adapters.eclipse.feature" version="3.0.0">
       <category name="Vitruv Tool Adapters"/>
    </feature>
-   <feature id="tools.vitruv.adapters.eclipse.feature.source" version="3.0.0.qualifier">
+   <feature id="tools.vitruv.adapters.eclipse.feature.source" version="3.0.0">
       <category name="Vitruv Tool Adapters"/>
    </feature>
-   <feature url="features/tools.vitruv.adapters.emf.feature_3.0.0.qualifier.jar" id="tools.vitruv.adapters.emf.feature" version="3.0.0.qualifier">
+   <feature url="features/tools.vitruv.adapters.emf.feature_3.0.0.jar" id="tools.vitruv.adapters.emf.feature" version="3.0.0">
       <category name="Vitruv Tool Adapters"/>
    </feature>
-   <feature id="tools.vitruv.adapters.emf.feature.source" version="3.0.0.qualifier">
+   <feature id="tools.vitruv.adapters.emf.feature.source" version="3.0.0">
       <category name="Vitruv Tool Adapters"/>
    </feature>
    <category-def name="Vitruv Tool Adapters" label="Vitruv Tool Adapters">
