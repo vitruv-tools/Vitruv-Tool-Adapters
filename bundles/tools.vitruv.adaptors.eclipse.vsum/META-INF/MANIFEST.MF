@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Vitruv Eclipse Adapter for V-SUM Creation
 Bundle-SymbolicName: tools.vitruv.adapters.eclipse.vsum;singleton:=true
 Automatic-Module-Name: tools.vitruv.adapters.eclipse.vsum
-Bundle-Version: 3.0.0
+Bundle-Version: 3.0.1.qualifier
 Bundle-Activator: tools.vitruv.adapters.eclipse.vsum.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,

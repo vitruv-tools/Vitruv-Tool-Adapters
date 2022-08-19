@@ -4,7 +4,7 @@ Bundle-Name: Vitruv EMF Adapter Tests
 Bundle-Vendor: vitruv.tools
 Bundle-SymbolicName: tools.vitruv.adapters.emf.tests;singleton:=true
 Automatic-Module-Name: tools.vitruv.adapters.emf.tests
-Bundle-Version: 3.0.0
+Bundle-Version: 3.0.1.qualifier
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ActivationPolicy: lazy
 Require-Bundle: tools.vitruv.testutils.vsum,
