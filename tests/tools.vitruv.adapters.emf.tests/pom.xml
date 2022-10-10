@@ -25,6 +25,12 @@
       <plugin>
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-surefire-plugin</artifactId>
+        <!-- workaround for Java 17, see https://stackoverflow.com/questions/72407785/easymock-tests-failing-with-java-lang-noclassdeffounderror-org-easymock-internal -->
+        <configuration>
+          <argLine>
+            --add-opens java.base/java.lang=ALL-UNNAMED
+          </argLine>
+        </configuration>
         <executions>
           <execution>
             <id>default-test</id>

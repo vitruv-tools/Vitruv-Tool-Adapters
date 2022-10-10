@@ -15,5 +15,5 @@ Require-Bundle: tools.vitruv.testutils.vsum,
  org.eclipse.gmf.runtime.diagram.ui.resources.editor
 Bundle-ClassPath: .,
  lib/cglib-nodep-3.1.jar,
- lib/easymock-3.1.jar,
+ lib/easymock-4.3.jar,
  lib/objenesis-1.2.jar
